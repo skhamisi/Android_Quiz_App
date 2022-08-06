@@ -6,9 +6,6 @@ The app provides a simple quiz consisting of 10 questions on various road signs.
 
 ## Use Guide
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
-
 When the quiz app is first launched, users will find themselves at the main menu. From the main menu, users can do one of three things:
 
 * Start the quiz (provides default number of questions
