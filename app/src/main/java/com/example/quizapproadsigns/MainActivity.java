@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.Menu;
@@ -12,6 +14,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -65,8 +70,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int id = item.getItemId();
         if (id == R.id.settingsButton) {
 
-//            Intent settings = new Intent(this, SettingsActivity.class);
-//            startActivity(settings);
             getSettings();
 
         }
@@ -79,24 +82,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         builder.setTitle("How many questions would you like?");
 
         // Set up the input
-        final EditText input = new EditText(this);
+        EditText input = new EditText(this);
         // Specify the type of input expected
         input.setInputType(InputType.TYPE_CLASS_NUMBER);
         input.setHint("Enter Amount");
         builder.setView(input);
 
+        Questions questions = new Questions();
+        int maxNumberOfQuestions = questions.questions.length;
+        String errorMessage = "Please enter a number between 1 and " + maxNumberOfQuestions;
+
         // Set up the buttons
         builder.setPositiveButton("Start Quiz", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+
                 userInput = input.getText().toString();
 
-                Intent passUserInput = new Intent(MainActivity.this, QuizActivity.class);
-                passUserInput.putExtra("userInput", userInput);
-                System.out.println(userInput);
-                startActivity(passUserInput);
+                if (userInput.equals("")) {
+
+                    Toast error = Toast.makeText(MainActivity.this, errorMessage, Toast.LENGTH_LONG);
+                    error.show();
+
+                } else {
+                    Intent passUserInput = new Intent(MainActivity.this, QuizActivity.class);
+                    passUserInput.putExtra("userInput", userInput);
+                    startActivity(passUserInput);
+                }
             }
         });
+
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
