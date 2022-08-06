@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Road Signs Quiz</string>
+    <string name="scorePassed">Score: %1$d%%\nCorrect: %2$d / %3$d\n\nCongratulations, you passed!</string>
+    <string name="scoreFailed">Score: %1$d%%\nCorrect: %2$d / %3$d\n\nYou failed. You need a minimum 70%% to pass.</string>
+    <string name="title_activity_settings">Settings Activity</string>
+
+    <!--attempts_record.xml-->
+    <string name="blank">blank</string>
+    <string name="correct">Correct: </string>
+    <string name="score">Score: </string>
+    <string name="status">Status: </string>
+    <string name="attempt">Attempt: </string>
+
+    <!--delete_record.xml-->
+    <string name="Delete">Delete Record?</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+
+    <!--main.xml-->
+    <string name="start">Start Quiz</string>
+    <string name="attempts">View Attempts</string>
+    <string name="Title">Road Signs Quiz</string>
+
+    <!--result.xml-->
+    <string name="Menu">Main Menu</string>
+    <string name="results">Quiz Results</string>
+
+    <!--settings.xml-->
+    <string name="Enter_questions">Enter # of Questions: </string>
+
+
+</resources>

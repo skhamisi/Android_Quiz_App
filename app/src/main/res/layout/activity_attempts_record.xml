@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:drawable/editbox_dropdown_dark_frame">
+
+    <TextView
+        android:id="@+id/percentageTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/blank"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/percentageLabelTextView"
+        app:layout_constraintTop_toBottomOf="@+id/attemptTextView" />
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/blank"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scoreLabelTextView"
+        app:layout_constraintTop_toBottomOf="@+id/percentageTextView" />
+
+    <TextView
+        android:id="@+id/scoreLabelTextView"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="@string/correct"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percentageLabelTextView" />
+
+    <TextView
+        android:id="@+id/percentageLabelTextView"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="@string/score"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attemptLabelTextView" />
+
+    <TextView
+        android:id="@+id/statusLabelTextView"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="@string/status"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreLabelTextView" />
+
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/blank"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toEndOf="@+id/statusLabelTextView"
+        app:layout_constraintTop_toBottomOf="@+id/scoreTextView" />
+
+    <TextView
+        android:id="@+id/attemptTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/blank"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/attemptLabelTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/attemptLabelTextView"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="@string/attempt"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
