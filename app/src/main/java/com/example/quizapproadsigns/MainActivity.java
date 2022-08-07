@@ -37,23 +37,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
 
-//        switch (v.getId()) {
-//            case R.id.startQuizButton:
-//                Intent quizIntent = new Intent(MainActivity.this, QuizActivity.class);
-//                startActivity(quizIntent);
-//            case R.id.viewAttemptsButton:
-//                Intent viewIntent = new Intent(MainActivity.this, AttemptsRecordActivity.class);
-//                startActivity(viewIntent);
-//        }
-
-        if (v == start) {
-            Intent quizIntent = new Intent(MainActivity.this, QuizActivity.class);
-            startActivity(quizIntent);
-        }
-        else if (v == view) {
-
-            Intent viewIntent = new Intent(MainActivity.this, AttemptsRecordActivity.class);
-            startActivity(viewIntent);
+        switch (v.getId()) {
+            case R.id.startQuizButton:
+                Intent startQuizIntent = new Intent(MainActivity.this, QuizActivity.class);
+                startActivity(startQuizIntent);
+                break;
+            case R.id.viewAttemptsButton:
+                Intent viewAttemptsIntent = new Intent(MainActivity.this, AttemptsRecordActivity.class);
+                startActivity(viewAttemptsIntent);
+                break;
         }
     }
 
