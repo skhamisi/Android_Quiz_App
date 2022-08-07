@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
 public class QuizActivity extends AppCompatActivity {
 
@@ -144,9 +145,9 @@ public class QuizActivity extends AppCompatActivity {
             String stringImage = questions.getImage(questionNumber);
             // Looking through res/drawable for .jpg ID that matches passed string
             int resID = res.getIdentifier(stringImage, "drawable", getPackageName());
-            Drawable image = res.getDrawable(resID);
+            Drawable image = ResourcesCompat.getDrawable(res, resID, getTheme());
 
-            // Displays all of the quiz information to the user
+            //Displays all of the quiz information to the user
             signImageView.setImageDrawable(image);
             questionView.setText(questions.getQuestion(questionNumber));
             buttonChoice1.setText(questions.getChoice1(questionNumber));
