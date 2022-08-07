@@ -6,6 +6,6 @@
         android:id="@+id/settingsButton"
         android:icon="@drawable/settings"
         android:orderInCategory="100"
-        android:title="Add"
+        android:title="@string/title_activity_settings"
         app:showAsAction="always" />
 </menu>

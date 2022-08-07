@@ -97,8 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 if (userInput.equals("") || userInput.equals("0")) {
 
-                    Toast error = Toast.makeText(MainActivity.this, errorMessage, Toast.LENGTH_LONG);
-                    error.show();
+                    Toast.makeText(MainActivity.this, errorMessage, Toast.LENGTH_LONG).show();
 
                 } else {
                     Intent passUserInput = new Intent(MainActivity.this, QuizActivity.class);

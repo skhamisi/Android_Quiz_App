@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -53,6 +54,12 @@ public class QuizActivity extends AppCompatActivity {
         buttonChoice3 = findViewById(R.id.buttonChoice3);
         buttonChoice4 = findViewById(R.id.buttonChoice4);
 
+        Toast correct = Toast.makeText(getApplicationContext(),
+                "Correct", Toast.LENGTH_SHORT);
+
+        Toast wrong = Toast.makeText(getApplicationContext(),
+                "Wrong", Toast.LENGTH_SHORT);
+
         updateQuestion();
 
         buttonChoice1.setOnClickListener(new View.OnClickListener() {
@@ -65,12 +72,13 @@ public class QuizActivity extends AppCompatActivity {
                     // Increments score if correct
                     score += 1;
                     // Displays "Correct" pop up to user
-                    Toast.makeText(QuizActivity.this,"Correct",Toast.LENGTH_SHORT).show();
+                    correct.show();
+
                 }
                 else {
                     // Does not increment score if wrong
                     // Displays "Wrong" pop to user
-                    Toast.makeText(QuizActivity.this,"Wrong",Toast.LENGTH_SHORT).show();
+                    wrong.show();
 
                 }
                 // Continues quiz and displays next question
@@ -83,12 +91,11 @@ public class QuizActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(buttonChoice2.getText() == answer)
                 {
-
                     score += 1;
-                    Toast.makeText(QuizActivity.this,"Correct",Toast.LENGTH_SHORT).show();
+                    correct.show();
                 }
                 else {
-                    Toast.makeText(QuizActivity.this,"Wrong",Toast.LENGTH_SHORT).show();
+                    wrong.show();
                 }
 
                 updateQuestion();
@@ -102,10 +109,10 @@ public class QuizActivity extends AppCompatActivity {
                 {
 
                     score += 1;
-                    Toast.makeText(QuizActivity.this,"Correct",Toast.LENGTH_SHORT).show();
+                    correct.show();
                 }
                 else {
-                    Toast.makeText(QuizActivity.this,"Wrong",Toast.LENGTH_SHORT).show();
+                    wrong.show();
                 }
 
                 updateQuestion();
@@ -120,10 +127,10 @@ public class QuizActivity extends AppCompatActivity {
                 {
 
                     score += 1;
-                    Toast.makeText(QuizActivity.this,"Correct",Toast.LENGTH_SHORT).show();
+                    correct.show();
                 }
                 else {
-                    Toast.makeText(QuizActivity.this,"Wrong",Toast.LENGTH_SHORT).show();
+                    wrong.show();
                 }
                 updateQuestion();
             }
