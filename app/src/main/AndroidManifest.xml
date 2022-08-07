@@ -15,20 +15,20 @@
         tools:targetApi="31">
         <activity
             android:name=".QuizActivity"
-            android:label="@string/app_name"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/app_name" />
         <activity
             android:name=".ResultActivity"
-            android:label="Results"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Results" />
         <activity
             android:name=".AttemptsRecordActivity"
-            android:label="Attempts"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Attempts" />
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:exported="true">
+            android:exported="true"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
